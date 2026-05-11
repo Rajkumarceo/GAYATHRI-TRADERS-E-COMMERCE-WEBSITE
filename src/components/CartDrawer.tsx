@@ -8,7 +8,7 @@ interface CartDrawerProps {
 }
 
 export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
-  const { items, removeFromCart, updateQuantity, totalItems, totalPrice, clearCart, setIsCartOpen } = useCart();
+  const { items, removeFromCart, updateQuantity, totalItems, totalPrice, setIsCartOpen } = useCart();
   const navigate = useNavigate();
   const shippingThreshold = 1999;
   const progress = Math.min((totalPrice / shippingThreshold) * 100, 100);

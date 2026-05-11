@@ -1,4 +1,3 @@
-import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import CategoryGrid from '../components/CategoryGrid';
@@ -48,7 +47,6 @@ export default function Home({ searchQuery }: HomeProps) {
   const topDates = products.filter(p => p.category === 'Dates').slice(0, 4);
   const topChocolates = products.filter(p => p.category === 'Chocolates').slice(0, 4);
   const topNuts = products.filter(p => p.category === 'Nuts').slice(0, 4);
-  const topSeeds = products.filter(p => p.category === 'Seeds').slice(0, 4);
   const topDryFruits = products.filter(p => p.category === 'Dry Fruits').slice(0, 4);
 
   return (
